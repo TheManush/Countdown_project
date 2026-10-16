@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Countdown Studio</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <div class="cnt-container"> 
+            
+        <div class="player-photo">
+            <img src="{{ url_for('static', filename='DONNA.jpg') }}"
+                alt="Gianluigi Donnarumma">
+        </div>
+
+            <h1>Time till <span class="highlight"> GIANLUIGI DONNARUMMA'S</span> contract with Manchester City ends</h1>
+
+            <p class="cnt-text">
+              Gianluigi Donnarumma's contract with Manchester City runs until summer 2030 (June 30, 2030). 
+            </p>     
+
+            <div class ="cntdown">
+
+                <div class="timebox">
+                    <h2 id="days">{{ days }}</h2>
+                    <p>Days</p>
+                </div>
+                <div class="timebox">
+                    <h2 id="hours">{{ "%02d"|format(hours) }}</h2>
+                    <p>Hours</p>
+                </div>
+                <div class="timebox">
+                    <h2 id="minutes">{{ "%02d"|format(minutes) }}</h2>
+                    <p>Minutes</p>
+                </div>
+                <div class="timebox">
+                    <h2 id="seconds">{{ "%02d"|format(seconds) }}</h2>
+                    <p>Seconds</p>
+                </div>
+
+            </div>
+            
+            <p class="closing-text">We await.</p>
+            
+            <div class="club-logo">
+                <img src="{{ url_for('static', filename='city_logo.png') }}"
+                    alt="Manchester City logo">
+            </div>
+
+
+        </div>
+        <script>
+            async function updateCountdown() {
+                const response = await fetch('/cntdown-data');
+                const data = await response.json();
+
+                document.getElementById('days').textContent = data.days;
+                document.getElementById('hours').textContent = String(data.hours).padStart(2, '0');
+                document.getElementById('minutes').textContent = String(data.minutes).padStart(2, '0');
+                document.getElementById('seconds').textContent = String(data.seconds).padStart(2, '0');
+            
+            }
+            updateCountdown(); // Initial call to set the countdown immediately
+            setInterval(updateCountdown, 1000); // Update every second
+
+        </script>
+    </body>
+</html>
