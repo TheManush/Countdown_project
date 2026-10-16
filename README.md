@@ -7,14 +7,17 @@ A simple, live countdown website tracking the time remaining until Gianluigi Don
 🌐 **Live Website:** [Open the Countdown](https://donna-contract-cntdown.onrender.com)
 ## 📸 About the Project
 
-Countdown Studio is a personal web project built to display the remaining time until the target contract expiration date. It features a countdown timer that updates every second, a player photograph, and the Manchester City club logo.
+Countdown Studio is a personal web project built to display the remaining time until the target contract expiration date. This project was a learning attempt to understand the basics of web development, including Python, Flask, HTML, CSS, JavaScript, and deploying a website online. It was a small hands-on project to learn how a backend and frontend work together to create a live, interactive countdown.
+
+⚽ Inspiration Behind the Project
+
+Why Donnarumma?
+
+Watching Gianluigi Donnarumma 'play' gives me great pain, and I genuinely cannot wait until his Manchester City contract expires. So, naturally, I decided to turn that frustration into a small web development project.
 
 ### ✨ Features
-
 - Live countdown displaying days, hours, minutes, and seconds.
 - Automatic updates every second without refreshing the page.
-- Donnarumma's photograph and Manchester City logo.
-- Dark blue gradient background with a modern, minimalist design.
 - Responsive layout for desktop and mobile devices.
 - Free online deployment using Render.
 
@@ -84,17 +87,7 @@ Visit **http://127.0.0.1:5000** in your browser.
 
 This project is deployed on Render using a free web service connected to GitHub.
 
-**Build command:**
 
-```bash
-pip install -r requirements.txt
-```
-
-**Start command:**
-
-```bash
-gunicorn app:app
-```
 
 The website may take a little longer to load after a period of inactivity because Render's free web services can spin down when idle.
 
