@@ -4,7 +4,9 @@ A simple, live countdown website tracking the time remaining until Gianluigi Don
 
 ## 🌐 Live Website
 
-🌐 **Live Website:** [Open the Countdown](https://donna-contract-cntdown.onrender.com)
+ [Open the Countdown](https://donna-contract-cntdown.onrender.com)
+
+ 
 ## 📸 About the Project
 
 Countdown Studio is a personal web project built to display the remaining time until the target contract expiration date. This project was a learning attempt to understand the basics of web development, including Python, Flask, HTML, CSS, JavaScript, and deploying a website online. It was a small hands-on project to learn how a backend and frontend work together to create a live, interactive countdown.
